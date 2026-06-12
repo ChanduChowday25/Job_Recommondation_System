@@ -1,0 +1,9 @@
+POST http://localhost:8081/jobs
+Content-Type: application/json
+
+{
+  "title": "Java Developer",
+  "description": "Spring Boot required",
+  "experienceRequired": 2,
+  "location": "Chennai"
+}

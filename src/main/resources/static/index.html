@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>AI Job Matching System</h1>
+
+<!-- AUTH SECTION -->
+<div id="authBox" class="box">
+
+    <!-- Toggle -->
+    <div>
+        <button onclick="showLogin()">Login</button>
+        <button onclick="showRegister()">Register</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input id="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="registerForm" style="display:none;">
+        <h2>Register</h2>
+        <input id="rname" placeholder="Name">
+        <input id="remail" placeholder="Email">
+        <input id="rpassword" type="password" placeholder="Password">
+        <button onclick="register()">Register</button>
+    </div>
+
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none;">
+
+    <button onclick="logout()">Logout</button>
+
+    <div class="box">
+        <h2>Add Candidate</h2>
+        <input id="cname" placeholder="Name">
+        <input id="cemail" placeholder="Email">
+        <input id="cexp" placeholder="Experience">
+        <button onclick="addCandidate()">Add Candidate</button>
+    </div>
+
+    <div class="box">
+        <h2>Add Job</h2>
+        <input id="jtitle" placeholder="Title">
+        <input id="jdesc" placeholder="Description">
+        <input id="jexp" placeholder="Experience">
+        <input id="jloc" placeholder="Location">
+        <button onclick="addJob()">Add Job</button>
+    </div>
+
+    <div class="box">
+        <h2>Add Skill</h2>
+        <input id="skill" placeholder="Skill">
+        <button onclick="addSkill()">Add Skill</button>
+    </div>
+
+    <div class="box">
+        <h2>Assign Skill to Candidate</h2>
+        <select id="candidateSelect"></select>
+        <select id="skillSelect"></select>
+        <button onclick="assignCandidateSkill()">Assign</button>
+    </div>
+
+    <div class="box">
+        <h2>Assign Skill to Job</h2>
+        <select id="jobSelect"></select>
+        <select id="skillSelectJob"></select>
+        <button onclick="assignJobSkill()">Assign</button>
+    </div>
+
+    <div class="box">
+        <h2>Find Jobs</h2>
+        <select id="recommendCandidate"></select>
+        <button onclick="getJobs()">Get Recommendations</button>
+        <ul id="result"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
